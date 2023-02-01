@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication-box</title>
+    <script>
+        function click_alert(){
+            window.alert("경고! 경고! 병준! 장애!");
+        }
+        function click_prompt(){
+            window.prompt("강병준이 장애인 이유를 쓰시오!");
+        }
+        function click_confirm(){
+            var BJOK = window.confirm("강병준은 장애입니까?");
+            if(BJOK){
+                window.alert("축하합니다 당신은 천재!");
+            }
+            else{
+                window.alert("당신은 버러지입니다. 병준이는 장애가 맞습니다.");
+            }
+        }
+    </script>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        button{
+            margin: 0;
+            padding: 25px;
+            width: 150px;
+            height: 100px;
+        }
+    </style> 
+</head>
+<body>
+    <div>
+        <button class = "alertbt" value = "경고창" onclick = "click_alert()">경고창</button>
+    </div>
+
+    <div>
+        <button class = "promptbt" value = "입력창" onclick = "click_prompt()">입력창</button>
+    </div>
+
+    <div>
+        <button class = "confirmbt" value = "확인창" onclick = "click_confirm()">확인창</button>
+    </div>
+</body>
+</html>

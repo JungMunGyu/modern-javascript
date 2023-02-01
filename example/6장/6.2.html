@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : 시각을 콘솔에 표시하기</title>
+    <script>
+        function displayTime(){
+            var d = new Date();
+            console.log("현재 시간은 " + d.toLocaleString() + " 입니다.");
+        }
+        // 1. window 객체의 onload 프로퍼티에 함수를 저장한다.
+        window.onload = function(){
+            // 2. input 요소의 객체 가져오기
+            var button = document.getElementById("button");
+            // 3. input 요소를 클릭했을 때 동작하는 이벤트 처리기 등록
+            button.onclick = displayTime;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value = "click" id = "button">
+</body>
+</html>
