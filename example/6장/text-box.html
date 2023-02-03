@@ -23,29 +23,56 @@
         }
     </script>
     <style>
-        body{
+        header{
+            margin: 0;
+            padding: 100px;
+            text-align: center;
+        }
+        main{
             display: flex;
             justify-content: space-evenly;
         }
         button{
             margin: 0;
-            padding: 25px;
             width: 150px;
-            height: 100px;
+            height: 70px;
+            font-size: 15px;
+            border-color: powderblue;
+            border-radius: 15px;
+            color: black;
+            background-color: powderblue;
+            -webkit-transition: all .2s ease-in-out;
+            box-shadow: 4px 12px 30px 6px rgb(0 0 0 / 9%);
+        }
+        button:hover{
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+            background-color: aliceblue;
+            border-color: aliceblue;
+            box-shadow: 4px 12px 20px 6px rgb(0 0 0 / 18%);
         }
     </style> 
 </head>
 <body>
-    <div>
-        <button class = "alertbt" value = "경고창" onclick = "click_alert()">경고창</button>
-    </div>
-
-    <div>
-        <button class = "promptbt" value = "입력창" onclick = "click_prompt()">입력창</button>
-    </div>
-
-    <div>
-        <button class = "confirmbt" value = "확인창" onclick = "click_confirm()">확인창</button>
-    </div>
+    <header>
+        <h1>병준이는 장애일까요?</h1>
+    </header>
+    <main>
+        <div>
+            <button class = "alertbt" value = "경고창" onclick = "click_alert()">아닐걸?</button>
+        </div>
+    
+        <div>
+            <button class = "promptbt" value = "입력창" onclick = "click_prompt()">난 알아</button>
+        </div>
+    
+        <div>
+            <button class = "confirmbt" value = "확인창" onclick = "click_confirm()">정답보기</button>
+        </div>
+    </main>
+    
 </body>
 </html>
